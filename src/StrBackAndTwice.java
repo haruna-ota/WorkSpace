@@ -10,15 +10,10 @@ public class StrBackAndTwice {
     static int reverseAndTwice(int numbers) {
         String strNumbers = String.valueOf(numbers);   //intからStringへ変換
 
-        String[] word_list = strNumbers.split(""); //1文字ずつ切り分ける
+        StrBack2 strBack2 = new StrBack2();    //StrBack2クラスのメソッドを使う
 
-        StringBuilder sb = new StringBuilder();
+        String tmp = strBack2.reverse(strNumbers);  //結果を一度String型に入れる
 
-        for (int i = strNumbers.length() - 1; i >= 0; i--) {
-            sb.append(word_list[i]);    //後ろの文字から1文字ずつ追加する
-        }
-
-        String tmp = sb.toString(); //一度String型にする
         int twiceNumbers = Integer.parseInt(tmp) * 2;  //int型にして2倍する
 
         return twiceNumbers;
