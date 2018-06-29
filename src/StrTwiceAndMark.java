@@ -1,18 +1,9 @@
 public class StrTwiceAndMark {
     public static void main(String[] args) {
         //テストコード
-        //数字を2倍する
-        assert numTwice(1234) == (2468);
-        assert numTwice(0) == (0);
-        assert numTwice(1) == (2);
-        //数字を文字に変換
-        assert numToString(2468).equals("2468");
-        assert numToString(0).equals("0");
-        assert numToString(2).equals("2");
-        //末尾に！をつける
-        assert markCheck("2468").equals("2468!");
-        assert markCheck("0").equals("0!");
-        assert markCheck("2").equals("2!");
+        assert stringTwiceAndMark(1234).equals("2468!");
+        assert stringTwiceAndMark(0).equals("0!");
+        assert stringTwiceAndMark(1).equals("2!");
     }
 
     //数を2倍にするメソッド
@@ -27,7 +18,13 @@ public class StrTwiceAndMark {
 
     //末尾に！をつけるメソッド
     private static String markCheck(String stringNumber) {
-        StringBuilder sb = new StringBuilder(stringNumber);
-        return String.valueOf(sb.append("!"));  //  末尾に！マークつける
+        return stringNumber + "!";  //  末尾に！マークつける
     }
+
+    private static String stringTwiceAndMark(int number) {
+        int numTwice = numTwice(number);
+        String stringNumber = numToString(numTwice);
+        return markCheck(stringNumber);
+    }
+
 }
