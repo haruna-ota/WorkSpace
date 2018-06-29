@@ -1,9 +1,5 @@
 public class StrTwiceAndMark {
     public static void main(String[] args) {
-        //テストコード
-        assert stringTwiceAndMark(1234).equals("2468!");
-        assert stringTwiceAndMark(0).equals("0!");
-        assert stringTwiceAndMark(1).equals("2!");
     }
 
     //数を2倍にするメソッド
@@ -21,7 +17,7 @@ public class StrTwiceAndMark {
         return stringNumber + "!";  //  末尾に！マークつける
     }
 
-    private static String stringTwiceAndMark(int number) {
+    static String stringTwiceAndMark(int number) {  //パッケージプライベートにする（同一クラス、パッケージからアクセス可）
         int numTwice = numTwice(number);
         String stringNumber = numToString(numTwice);
         return markCheck(stringNumber);
