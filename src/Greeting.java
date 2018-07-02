@@ -3,32 +3,16 @@ public class Greeting {
 
     }
 
-    static String greeting(TimeZone timeZone) {   //パッケージプライベート
-        String greet = null;    //初期化
+    static String greeting(GreetingEnum timeZone) {   //パッケージプライベート
         switch (timeZone) {
-            case Asa:
-                greet = "おはよう";
-                break;
-            case Hiru:
-                greet = "こんにちは";
-                break;
-            case Yoru:
-                greet = "こんばんは";
-                break;
+            case Asa:   //朝の場合
+                return "おはよう";
+            case Hiru:  //昼の場合
+                return "こんにちは";
+            case Yoru:  //夜の場合
+                return "こんばんは";
         }
-        return greet;
-    }
-
-    protected enum TimeZone {
-        Asa("朝"),
-        Hiru("昼"),
-        Yoru("夜");
-
-        private String timeZone;
-
-        TimeZone(String timeZone) { //コンストラクタ
-            this.timeZone = timeZone;
-        }
+        return null;    //上記以外の場合
     }
 }
 
