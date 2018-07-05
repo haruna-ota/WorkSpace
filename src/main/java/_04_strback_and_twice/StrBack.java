@@ -1,3 +1,5 @@
+package _04_strback_and_twice;
+
 import java.util.Scanner;
 
 public class StrBack {

@@ -1,3 +1,5 @@
+package _07_greeting;
+
 public class GreetingTest {
     public static void main(String[] args) {
         //テストコード

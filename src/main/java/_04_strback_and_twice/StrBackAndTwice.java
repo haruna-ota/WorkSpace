@@ -1,3 +1,5 @@
+package _04_strback_and_twice;
+
 public class StrBackAndTwice {
     public static void main(String[] args) {
         //テストコード
