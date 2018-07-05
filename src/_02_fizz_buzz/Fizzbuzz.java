@@ -1,3 +1,5 @@
+package _02_fizz_buzz;
+
 public class Fizzbuzz {
     public static void main(String[] args) {
         //"1〜100"までの数字でFizzBuzz

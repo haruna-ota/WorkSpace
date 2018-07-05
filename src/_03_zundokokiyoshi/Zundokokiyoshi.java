@@ -1,3 +1,5 @@
+package _03_zundokokiyoshi;
+
 public class Zundokokiyoshi {
     public static void main(String[] args) {
         String[] zundoko = {"ズン ", "ドコ "};

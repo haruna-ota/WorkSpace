@@ -1,3 +1,5 @@
+package _08_people;
+
 class People {  //パッケージプライベート
     String name;    //名前
     PeopleAddressEnum address; //居場所（家or会社）

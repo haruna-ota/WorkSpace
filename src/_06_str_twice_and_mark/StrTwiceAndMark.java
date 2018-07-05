@@ -1,3 +1,5 @@
+package _06_str_twice_and_mark;
+
 public class StrTwiceAndMark {
     public static void main(String[] args) {
     }

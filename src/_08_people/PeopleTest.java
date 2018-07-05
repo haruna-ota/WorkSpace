@@ -1,3 +1,5 @@
+package _08_people;
+
 public class PeopleTest {
     public static void main(String[] args) {
         //テストコード

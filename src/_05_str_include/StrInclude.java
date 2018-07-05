@@ -1,3 +1,5 @@
+package _05_str_include;
+
 public class StrInclude {
     public static void main(String[] args) {
         //テストコード

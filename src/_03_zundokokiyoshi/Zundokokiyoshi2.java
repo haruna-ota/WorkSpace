@@ -1,3 +1,5 @@
+package _03_zundokokiyoshi;
+
 import java.util.ArrayList;
 
 public class Zundokokiyoshi2 {

@@ -1,3 +1,5 @@
+package _07_greeting;
+
 public class Greeting {
     public static void main(String[] args) {
 
