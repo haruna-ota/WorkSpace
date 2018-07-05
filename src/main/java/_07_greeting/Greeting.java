@@ -1,11 +1,7 @@
 package _07_greeting;
 
 public class Greeting {
-    public static void main(String[] args) {
-
-    }
-
-    static String greeting(GreetingEnum timeZone) {   //パッケージプライベート
+    public static String greeting(GreetingEnum timeZone) {
         switch (timeZone) {
             case Asa:   //朝の場合
                 return "おはよう";

@@ -1,14 +1,7 @@
 package _04_strback_and_twice;
 
 public class StrBack2 {
-    public static void main(String[] args) {
-        assert reverse("ab").equals("ba");
-        assert reverse("").equals("");
-        assert reverse("aba").equals("aba");
-        assert reverse("a").equals("a");
-    }
-
-    static String reverse(String word){
+    public static String reverse(String word) {
         int i;
         String[] word_list = word.split("");    //1文字ずつ切り分ける
 

@@ -1,21 +1,7 @@
 package _05_str_include;
 
 public class StrInclude {
-    public static void main(String[] args) {
-        //テストコード
-        assert strIncludeCheck("abc", "abc");
-        assert !strIncludeCheck("abc", "d");
-        assert !strIncludeCheck("abc", "ac");
-        assert !strIncludeCheck("abc", "abcd");
-        assert strIncludeCheck("", "");
-        assert !strIncludeCheck("", "a");
-        assert strIncludeCheck("a", "a");
-        assert strIncludeCheck("a", "");
-        assert strIncludeCheck("abc", "bc");
-        assert !strIncludeCheck("abcd", "bcde");
-    }
-
-    private static boolean strIncludeCheck(String word, String word2) {
+    public static boolean strIncludeCheck(String word, String word2) {
         //空文字判定
         if (word2.isEmpty()) {  //第二引数が空文字だったら絶対true
             return true;
