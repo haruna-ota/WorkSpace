@@ -1,10 +1,6 @@
 package _04_strback_and_twice;
 
 public class StrBack2 {
-    public static void main(String[] args) {
-
-    }
-
     public static String reverse(String word) {
         int i;
         String[] word_list = word.split("");    //1文字ずつ切り分ける

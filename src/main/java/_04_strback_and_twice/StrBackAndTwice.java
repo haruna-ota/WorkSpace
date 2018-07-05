@@ -1,10 +1,6 @@
 package _04_strback_and_twice;
 
 public class StrBackAndTwice {
-    public static void main(String[] args) {
-
-    }
-
     public static int reverseAndTwice(int numbers) {
         String strNumbers = String.valueOf(numbers);   //intからStringへ変換
 

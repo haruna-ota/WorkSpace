@@ -1,10 +1,6 @@
 package _05_str_include;
 
 public class StrInclude {
-    public static void main(String[] args) {
-
-    }
-
     public static boolean strIncludeCheck(String word, String word2) {
         //空文字判定
         if (word2.isEmpty()) {  //第二引数が空文字だったら絶対true

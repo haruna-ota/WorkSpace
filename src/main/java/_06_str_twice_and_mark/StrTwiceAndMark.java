@@ -1,9 +1,6 @@
 package _06_str_twice_and_mark;
 
 public class StrTwiceAndMark {
-    public static void main(String[] args) {
-    }
-
     //数を2倍にするメソッド
     private static int numTwice(int number) {
         return number * 2;     //数値を2倍する

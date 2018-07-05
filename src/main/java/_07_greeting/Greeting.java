@@ -1,10 +1,6 @@
 package _07_greeting;
 
 public class Greeting {
-    public static void main(String[] args) {
-
-    }
-
     public static String greeting(GreetingEnum timeZone) {
         switch (timeZone) {
             case Asa:   //朝の場合
