@@ -5,7 +5,7 @@ public class Greeting {
 
     }
 
-    static String greeting(GreetingEnum timeZone) {   //パッケージプライベート
+    public static String greeting(GreetingEnum timeZone) {
         switch (timeZone) {
             case Asa:   //朝の場合
                 return "おはよう";

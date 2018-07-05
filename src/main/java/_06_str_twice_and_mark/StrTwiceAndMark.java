@@ -19,7 +19,7 @@ public class StrTwiceAndMark {
         return stringNumber + "!";  //  末尾に！マークつける
     }
 
-    static String stringTwiceAndMark(int number) {  //パッケージプライベートにする（同一クラス、パッケージからアクセス可）
+    public static String stringTwiceAndMark(int number) {
         int numTwice = numTwice(number);
         String stringNumber = numToString(numTwice);
         return markCheck(stringNumber);
