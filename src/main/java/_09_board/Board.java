@@ -4,12 +4,12 @@ import java.util.List;
 
 class Board {
     private List<Task> tasks;   //タスクのかたまり（task1,task2......）
-    private int totalPoint = 0; //タスクの総ポイント
 
     //コンストラクタ
     Board(List<Task> tasks) {
         this.tasks = tasks;
     }
+
 
     //かんばんはタスクの枚数を計算できる
     int countTheNumberOfTasks() {
@@ -19,10 +19,10 @@ class Board {
     //かんばんはタスクの総ポイントを計算できる
     int countTheTasksPoint() {
         //Taskのpointをfor文でまわして数える
-        int i;
+        int totalPoint = 0;   //タスクの総ポイント
 
-        for (i = 0; i < tasks.size(); i++) {
-            totalPoint = totalPoint + tasks.get(i).point;    //task i個目のポイントを取ってくる
+        for (Task task : tasks) {   //拡張for文（全ての要素に対して行う）
+            totalPoint = totalPoint + task.point;    //task i個目のポイントを取ってくる
         }
         return totalPoint;
     }
@@ -31,15 +31,17 @@ class Board {
     String countTheDoneNumber() {
         //tasksの中で各taskのstateがTaskStateEnum.Doneのもののpointを計算
         //上記のポイント/タスクの総ポイント＊100+"%"を返す
-        int i;
+        int totalPoint;
         double achievementPoint = 0;   //完了タスクのポイント
-        double achievementRate = 0;    //タスクの達成率
-        for (i = 0; i < tasks.size(); i++) {
-            if (tasks.get(i).state == TaskStateEnum.Done) {
-                achievementPoint = achievementPoint + tasks.get(i).point;
+        double achievementRate;    //タスクの達成率
+
+        for (Task task : tasks) {//拡張for文（全ての要素に対して行う）
+            if (task.state == TaskStateEnum.Done) {
+                achievementPoint = achievementPoint + task.point;
             }
-            achievementRate = achievementPoint / totalPoint * 100;
         }
+        totalPoint = countTheTasksPoint();  //タスクの総ポイントを計算
+        achievementRate = achievementPoint / totalPoint * 100;  //  タスクの達成率を計算
         return String.valueOf(achievementRate) + "%";
     }
 }
