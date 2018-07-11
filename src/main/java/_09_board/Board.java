@@ -22,7 +22,7 @@ class Board {
         int totalPoint = 0;   //タスクの総ポイント
 
         for (Task task : tasks) {   //拡張for文（全ての要素に対して行う）
-            totalPoint = totalPoint + task.point;    //task i個目のポイントを取ってくる
+            totalPoint = totalPoint + task.getPoint();    //task i個目のポイントを取ってくる
         }
         return totalPoint;
     }
@@ -31,17 +31,15 @@ class Board {
     String countTheDoneNumber() {
         //tasksの中で各taskのstateがTaskStateEnum.Doneのもののpointを計算
         //上記のポイント/タスクの総ポイント＊100+"%"を返す
-        int totalPoint;
         double achievementPoint = 0;   //完了タスクのポイント
-        double achievementRate;    //タスクの達成率
 
         for (Task task : tasks) {//拡張for文（全ての要素に対して行う）
-            if (task.state == TaskStateEnum.Done) {
-                achievementPoint = achievementPoint + task.point;
+            if (task.getState() == TaskStateEnum.Done) {
+                achievementPoint = achievementPoint + task.getPoint();
             }
         }
-        totalPoint = countTheTasksPoint();  //タスクの総ポイントを計算
-        achievementRate = achievementPoint / totalPoint * 100;  //  タスクの達成率を計算
+        int totalPoint = countTheTasksPoint();  //タスクの総ポイントを計算
+        double achievementRate = achievementPoint / totalPoint * 100;  //  タスクの達成率を計算
         return String.valueOf(achievementRate) + "%";
     }
 }
