@@ -1,7 +1,5 @@
 package _09_board;
 
-import java.time.LocalDateTime;
-
 class Task {    //パッケージプライベート
     private String title;   //タスクのタイトル
     private TaskStateEnum state;    //タスクの進行状況（最初は未着手）
