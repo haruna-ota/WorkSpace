@@ -41,7 +41,7 @@ public class BoardTest {
         task2.changeStateToDoing(); //タスク2を進行中にする
         task3.changeStateToDone();  //タスク3を完了にする
 
-        List<Task> tasks = new ArrayList<>(Arrays.asList(task1, task2, task3));//タスクをリスト化
+        List<Task> tasks = Arrays.asList(task1, task2, task3);//タスクをリスト化
 
         Board board = new Board(tasks);
 

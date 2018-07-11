@@ -2,22 +2,22 @@ package _09_board;
 
 import java.util.List;
 
-class Board {
+public class Board {
     private List<Task> tasks;   //タスクのかたまり（task1,task2......）
 
     //コンストラクタ
-    Board(List<Task> tasks) {
+    public Board(List<Task> tasks) {
         this.tasks = tasks;
     }
 
 
     //かんばんはタスクの枚数を計算できる
-    int countTheNumberOfTasks() {
+    public int countTheNumberOfTasks() {
         return tasks.size();    //タスクの数を返す(tasksの要素の数)
     }
 
     //かんばんはタスクの総ポイントを計算できる
-    int countTheTasksPoint() {
+    public int countTheTasksPoint() {
         //Taskのpointをfor文でまわして数える
         int totalPoint = 0;   //タスクの総ポイント
 
@@ -28,7 +28,7 @@ class Board {
     }
 
     //かんばんは全部のタスクの完了ポイント/総ポイントを計算できる
-    String countTheDoneNumber() {
+    public String countTheDoneNumber() {
         //tasksの中で各taskのstateがTaskStateEnum.Doneのもののpointを計算
         //上記のポイント/タスクの総ポイント＊100+"%"を返す
         double achievementPoint = 0;   //完了タスクのポイント
