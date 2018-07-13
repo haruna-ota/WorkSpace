@@ -3,6 +3,7 @@ package _11_langiage2;
 public class Italian implements Language {   //インタフェース(Language)をつかう
 
     //挨拶を返すメソッド
+    @Override   //interfaceのメソッドを実装するときは@Overrideをつける
     public String greeting(String name) {
         return "buon giorno " + name;
     }
