@@ -9,9 +9,9 @@ import static org.junit.Assert.*;
 
 public class RentalGoodsTest {
 
-    RentalGoods cd = new Cd("タイトルA");
-    RentalGoods dvd = new Dvd("タイトルB");
-    RentalGoods comic = new Comic("タイトルC");
+    private RentalGoods cd = new Cd("タイトルA");
+    private RentalGoods dvd = new Dvd("タイトルB");
+    private RentalGoods comic = new Comic("タイトルC");
 
     //テスト1パターン目（CD,DVD,漫画を1つずつ借りる時）
     @Test
