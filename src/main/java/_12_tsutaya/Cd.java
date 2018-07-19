@@ -20,10 +20,6 @@ public class Cd implements RentalGoods {
 
     @Override
     public int calculatePrice() {   //新旧割引を計算するメソッド
-        if (state == RentalGoodsStateEnum.OLD) {
-            return price / 2;    //旧作の場合、半額になる
-        } else {
-            return price;       //新作の場合、定価
-        }
+        return state == RentalGoodsStateEnum.OLD ? price / 2 : price;   //三項演算子
     }
 }
