@@ -16,7 +16,7 @@ public class Comic implements RentalGoods {
     }
 
     @Override
-    public int getPrice() {
-        return price;
+    public int calculatePrice() {   //新旧割引を計算するメソッド
+        return price;       //新旧が無いため、定価
     }
 }

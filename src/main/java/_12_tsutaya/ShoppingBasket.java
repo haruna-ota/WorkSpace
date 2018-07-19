@@ -10,11 +10,11 @@ public class ShoppingBasket {
         this.rentalGoodsList = rentalGoodsList;
     }
 
-    //カゴの中身の合計金額を計算
+    //カゴの中身の合計金額を計算(CD,DVD旧作の場合は半額)
     public int calculateToTotalAmount() {
         int totalAmount = 0;
         for (RentalGoods rentalGoods : rentalGoodsList) {   //拡張for文（全ての要素に対して行う）
-            totalAmount = totalAmount + rentalGoods.getPrice();    //i個目のpriceを取ってくる
+            totalAmount = totalAmount + rentalGoods.calculatePrice();
         }
         return totalAmount;
     }
